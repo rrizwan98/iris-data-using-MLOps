@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/iris-flower-species.csv
+      md5: bc2885c3353c19b488a6fba77ddd8cfd
+      size: 2771
+    - path: src/get_data.py
+      md5: e1160ed05042cf1dbe1bf6ce1ae00b1b
+      size: 693
+    - path: src/load_data.py
+      md5: f9ab429aeabb08228760a2523eee54fa
+      size: 588
+    outs:
+    - path: data/raw/iris-flower-species.csv
+      md5: 8f093e421c92c9e87a9b0a774314cebd
+      size: 2913

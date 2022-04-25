@@ -16,8 +16,8 @@ def get_data(config_path):
     # print(config)
     data_path= config["data_source"]["s3_source"]
     data=pd.read_csv(data_path, sep=",", encoding="utf-8")
-    print(data)
-    # return data
+    # print(data)
+    return data
 
 if __name__=="__main__":
     args=argparse.ArgumentParser()

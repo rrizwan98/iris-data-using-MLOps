@@ -1,0 +1,9 @@
+stages:
+  load_data:                  #name of the first stage
+    cmd: python src/load_data.py --config=params.yaml
+    deps: 
+    - src/get_data.py
+    - src/load_data.py
+    - data_given/iris-flower-species.csv
+    outs:
+    - data/raw/iris-flower-species.csv
