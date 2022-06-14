@@ -1,5 +1,12 @@
-dvc 
+
+# third party packages
+dvc
 dvc[gdrive]
 sklearn
-pyymal
 pandas
+pytest
+tox
+flake8
+flask
+gunicorn
+PyYAML
