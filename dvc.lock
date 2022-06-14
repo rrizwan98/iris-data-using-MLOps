@@ -16,3 +16,19 @@ stages:
     - path: data/raw/iris-flower-species.csv
       md5: 8f093e421c92c9e87a9b0a774314cebd
       size: 2913
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/iris-flower-species.csv
+      md5: 8f093e421c92c9e87a9b0a774314cebd
+      size: 2913
+    - path: src/split_data.py
+      md5: d36fa46c6f5cf4eab565d40d72122148
+      size: 1106
+    outs:
+    - path: data/processed/test_iris.csv
+      md5: 8881ff9c03b8fe3208e02524733c53f5
+      size: 633
+    - path: data/processed/train_iris.csv
+      md5: 4bedea2ec69466466a39713ceb3b0c4c
+      size: 2343

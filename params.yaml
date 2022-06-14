@@ -1,7 +1,7 @@
 base:
   project: iris-flower-species-project
   random_state: 42
-  target_col: TARGET
+  target_col: Species
 
 data_source:
   s3_source: data_given/iris-flower-species.csv
@@ -17,10 +17,10 @@ split_data:
 estimators:
   RandomForestClassifier:
     params:
-      n_samples=100, 
-      n_features=20, 
-      n_informative=15,
-      n_redundant=5
+      n_estimators: 20, 
+      n_features: 20, 
+      n_informative: 15,
+      n_redundant: 5
 
 model_dir: save_models
 
