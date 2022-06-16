@@ -32,3 +32,28 @@ stages:
     - path: data/processed/train_iris.csv
       md5: 4bedea2ec69466466a39713ceb3b0c4c
       size: 2343
+  train_and_evaluate:
+    cmd: python src/train_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_iris.csv
+      md5: 8881ff9c03b8fe3208e02524733c53f5
+      size: 633
+    - path: data/processed/train_iris.csv
+      md5: 4bedea2ec69466466a39713ceb3b0c4c
+      size: 2343
+    - path: src/train_evaluate.py
+      md5: ba439d7f7747528106e0c1ab0e579ea5
+      size: 2634
+    params:
+      params.yaml:
+        estimators.RandomForestClassifier.params.n_estimators: 20
+    outs:
+    - path: reports/params.json
+      md5: 308d4cebc87fe3cc9fc6e20f76ae0761
+      size: 28
+    - path: reports/scores.json
+      md5: 5922519f382e303ed8f5452654692323
+      size: 107
+    - path: saved_models/model.joblib
+      md5: 46caca990bc4973fe75e111bd0456177
+      size: 31672
