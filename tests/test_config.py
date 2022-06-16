@@ -19,20 +19,20 @@ input_data = {
     {"SepalLengthCm": 4.4, 
     "SepalWidthCm": 2.1, 
     "PetalLengthCm": 1.1, 
-    "PetalWidthCm": 0.2, 
+    "PetalWidthCm": 0.2 
     },
 
     "incorrect_col":
-    {"SepalLengthCm": 4.4, 
-    "SepalWidthCm": 2.1, 
-    "PetalLengthCm": 1.1, 
-    "PetalWidthCm": 0.2, 
+    {"Sepal Length Cm": 4.4, 
+    "Sepal Width Cm": 2.1, 
+    "Petal Length Cm": 1.1, 
+    "Petal Width Cm": 0.2 
     }
 }
 
 TARGET_range = {
-    "min": 0.0,
-    "max": 2.0
+    "min": 0,
+    "max": 2
 }
 
 def test_form_response_correct_range(data=input_data["correct_range"]):
